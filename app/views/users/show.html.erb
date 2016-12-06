@@ -1,0 +1,15 @@
+<div class="container">
+
+  <div class="left_side">
+    <ul>
+      <li><img class="profile_pic" src='https://avatars.githubusercontent.com/u/<%=current_user.uid%>'></li>
+      <li><%= current_user.name %></li>
+      <li><%= current_user.username %></li>
+      <li><%= current_user.location %></li>
+      <li><%= current_user.email %></li>
+      <li>Organizations: <a href='https://api.github.com/users/<%=current_user.username%>/orgs'>Organzations</a></li>
+</div>
+  Starred:
+  Followers: <a href='https://api.github.com/users/<%=current_user.username%>/followers'>Followers</a>
+  Following: <a href='https://api.github.com/users/<%=current_user.username%>/following{/other_user}'>Following</a>
+</div>
