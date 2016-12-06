@@ -28,23 +28,36 @@
           <li> <a href="/">Gist</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li> <a href="/">Bell</a></li>
-          <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#">+ <span class="caret"></span></a>
+          <li> <a href="/"><span class="glyphicon glyphicon-bell" aria-hidden="true"></span></a></li>
+          <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span><span class="caret"></span></a>
             <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
+            <li><a href="#">New repository</a></li>
+            <li><a href="#">Import repository</a></li>
+            <li><a href="#">New gist</a></li>
+            <li><a href="#">New organization</a></li>
           </ul>
           </li>
-          <li><% if current_user %>
-            <%= link_to "Logout, #{current_user.name}", logout_path, method: :delete %>
+          <li class="dropdown">
+          <% if current_user %>
+            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#"><img class="avatar" src="https://avatars.githubusercontent.com/u/<%=current_user.uid%>"><span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Signed in as <%= "#{current_user.username}" %></a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Your profile</a></li>
+              <li><a href="#">Your stars</a></li>
+              <li><a href="#">Explore</a></li>
+              <li><a href="#">Integrations</a></li>
+              <li><a href="#">Help</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Settings</a></li>
+              <li>
+                <%= link_to "Sign out", logout_path, method: :delete %>
+              </li>
+            </ul>
           <% else %>
-            <%= link_to "Sign In", "https://github.com/login/oauth/authorize?client_id=#{ENV["github_client_id"]}&scope=repo" %>
-          <% end %></li>
+            <%= link_to "Sign In", "https://github.com/login/oauth/authorize?client_id=#{ENV["github_client_id"]}&scope=repo"%>
+          <% end %>
+          </li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
