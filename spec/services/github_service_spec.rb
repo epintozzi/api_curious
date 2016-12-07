@@ -55,4 +55,26 @@ describe "GithubService" do
       expect(repo).to have_key(:description)
     end
   end
+
+  context "#followers" do
+    it "returns all a user's followers", :vcr do
+      user = User.new(token: ENV["github_user_token"])
+      followers = GithubService.new.followers(user)
+      follower = followers.first
+
+      expect(followers).to be_an(Array)
+      expect(follower).to have_key(:login)
+    end
+  end
+
+  context "#following" do
+    it "returns all followers of a user", :vcr do
+      user = User.new(token: ENV["github_user_token"])
+      following = GithubService.new.following(user)
+      follower = following.first
+
+      expect(following).to be_an(Array)
+      expect(follower).to have_key(:login)
+    end
+  end
 end

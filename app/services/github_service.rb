@@ -47,6 +47,22 @@ class GithubService
     JSON.parse(response.body, symbolize_names: true)
   end
 
+  def followers(user)
+    response = conn.get("/user/followers?access_token=#{user.token}")
+
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def following(user)
+    response = conn.get("/user/following?access_token=#{user.token}")
+
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def orgs
+
+  end
+
   private
     attr_reader :conn
 
