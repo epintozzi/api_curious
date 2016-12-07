@@ -19,11 +19,60 @@
    list-style-type: none !important;
  }
 
- .profile_pic {
+ .nav-container {
+   margin-left: 90px;
+   margin-right: 90px;
+   padding-left: 26px;
+   padding-right: 26px;
+ }
+
+ .logo{
+   height: 28px;
+   margin-right: -10px;
+   margin-top: -5px;
+ }
+
+ .profile-pic {
    height: 230px;
    width: 230px;
+   border-radius: 6px !important;
  }
 
 .avatar {
   height: 20px;
+  border-radius: 3px !important;
+}
+
+.container-profile {
+  margin-left: 90px;
+  margin-top: 24px;
+  margin-right: 90px;
+  padding-left: 26px;
+  padding-right: 26px;
+}
+
+.user-info {
+  padding-left: 0px;
+}
+
+.profile-name {
+  padding-bottom: 10px;
+  margin: 0px;
+}
+
+.profile-name .full-name{
+  font-size: 26px;
+  line-height: 30px;
+}
+.profile-name .username{
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #666;
+  margin-top: -10px;
+}
+
+.contributions {
+  font-size: 18px;
+  font-weight: 300;
 }
