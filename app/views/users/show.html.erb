@@ -12,10 +12,17 @@
       <li>Organizations: <a href='https://api.github.com/users/<%=current_user.username%>/orgs'>Organzations</a></li>
   </div>
   <div class="col-md-9">
-    Starred:
+    <ul class="nav nav-tabs">
+      <li role="presentation" class="active"><a href="#">Overview</a></li>
+      <li role="presentation"><a href="#">Repositories</a></li>
+      <li role="presentation"><a href="#">Stars</a></li>
+      <li role="presentation"><a href="#">Followers</a></li>
+      <li role="presentation"><a href="#">Following</a></li>
+    </ul>
+
     Followers: <a href='https://api.github.com/users/<%=current_user.username%>/followers'>Followers</a>
-    Following: <a href='https://api.github.com/users/<%=current_user.username%>/following{/other_user}'>Following</a>
-    <h3 class="contributions">Contribution Activity</h3>
+    <div class="contrbiutions">
+    <h3 class="contribution-activity">Contribution Activity</h3>
 
         <% @all_commits.each do |commit| %>
           <li>
@@ -24,5 +31,6 @@
             <hr>
           </li>
         <% end %>
+      </div>
   </div>
 </div>

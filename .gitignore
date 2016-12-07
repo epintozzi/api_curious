@@ -18,3 +18,6 @@
 
 # Ignore application configuration
 /config/application.yml
+
+# Ignore vcr files
+/spec/fixtures/vcr_cassettes/*
