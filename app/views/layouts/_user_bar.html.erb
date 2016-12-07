@@ -1,0 +1,10 @@
+<ul class="user-info">
+  <li><img class="profile-pic" src='https://avatars.githubusercontent.com/u/<%=current_user.uid%>'></li>
+  <div class="profile-name">
+    <li><h1 class="full-name"><%= current_user.name %></h1></li>
+    <li class="username"><%= current_user.username %></li>
+  </div>
+  <li><%= current_user.location %></li>
+  <li><%= current_user.email %></li>
+  <li>Organizations: <a href='https://api.github.com/users/<%=current_user.username%>/orgs'>Organizations</a></li>
+</ul>

@@ -1,30 +1,15 @@
 <div class="container container-profile">
 
   <div class="col-md-3">
-    <ul class="user-info">
-      <li><img class="profile-pic" src='https://avatars.githubusercontent.com/u/<%=current_user.uid%>'></li>
-      <div class="profile-name">
-        <li><h1 class="full-name"><%= current_user.name %></h1></li>
-        <li class="username"><%= current_user.username %></li>
-      </div>
-      <li><%= current_user.location %></li>
-      <li><%= current_user.email %></li>
-      <li>Organizations: <a href='https://api.github.com/users/<%=current_user.username%>/orgs'>Organzations</a></li>
+    <%= render 'layouts/user_bar' %>
   </div>
   <div class="col-md-9">
-    <ul class="nav nav-tabs">
-      <li role="presentation" class="active"><a href="#">Overview</a></li>
-      <li role="presentation"><a href="#">Repositories</a></li>
-      <li role="presentation"><a href="#">Stars</a></li>
-      <li role="presentation"><a href="#">Followers</a></li>
-      <li role="presentation"><a href="#">Following</a></li>
-    </ul>
+    <%= render 'layouts/tabs' %>
 
     Followers: <a href='https://api.github.com/users/<%=current_user.username%>/followers'>Followers</a>
-    <div class="contrbiutions">
-    <h3 class="contribution-activity">Contribution Activity</h3>
-
-        <% @all_commits.each do |commit| %>
+    <div class="feed">
+      <h3 class="contribution-activity">Contribution Activity</h3>
+        <% @user_commits.each do |commit| %>
           <li>
             <%= "Created commit in #{commit[:repo][:name]}" %><br>
             <%= "Message: #{commit[:payload][:commits].first[:message]}" %>
