@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   resources :repos, only: [:index]
   resources :stars, only: [:index]
   resources :followers, only: [:index]
+  resources :following, only: [:index]
 end

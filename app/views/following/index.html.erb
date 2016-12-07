@@ -1,0 +1,19 @@
+<div class="container container-profile">
+
+  <div class="col-md-3">
+    <%= render 'layouts/user_bar' %>
+  </div>
+  <div class="col-md-9">
+    <%= render 'layouts/tabs' %>
+
+    <div class="feed">
+
+        <% @following.each do |follower| %>
+          <li>
+            <h3><%= link_to "#{follower[:login]}", root_path %></h3>
+            <hr>
+          </li>
+        <% end %>
+      </div>
+  </div>
+</div>
