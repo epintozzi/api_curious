@@ -35,14 +35,16 @@ class GithubService
     commit_details
   end
 
-  def user_repos(username)
-    response = conn.get("/users/#{username}/repos?client_id=#{ENV['github_client_id']}&client_secret=#{ENV['github_client_secret']}&per_page=100")
+  def user_repos(user)
+    response = conn.get("/user/repos?access_token=#{user.token}&per_page=100")
 
     JSON.parse(response.body, symbolize_names: true)
   end
 
-  def starred
+  def starred(user)
+    response = conn.get("/user/starred?access_token=#{user.token}")
 
+    JSON.parse(response.body, symbolize_names: true)
   end
 
   private

@@ -32,7 +32,8 @@ describe "GithubService" do
 
   context "#user_repos" do
     it "returns all repositories for a user", :vcr do
-      user_repos = GithubService.new.user_repos("epintozzi")
+      user = User.new(token: ENV["github_user_token"])
+      user_repos = GithubService.new.user_repos(user)
       repo = user_repos.first
 
       expect(user_repos).to be_an(Array)
@@ -43,8 +44,9 @@ describe "GithubService" do
   end
 
   context "#starred" do
-    xit "returns all starred repositories for a user", :vcr do
-      starred_repos = GithubService.new.starred("epintozzi")
+    it "returns all starred repositories for a user", :vcr do
+      user = User.new(token: ENV["github_user_token"])
+      starred_repos = GithubService.new.starred(user)
       repo = starred_repos.first
 
       expect(starred_repos).to be_an(Array)

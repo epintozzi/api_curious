@@ -8,4 +8,5 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show]
   resources :repos, only: [:index]
+  resources :stars, only: [:index]
 end
