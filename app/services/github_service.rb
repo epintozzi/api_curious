@@ -1,5 +1,11 @@
 class GithubService
 
+  def initialize
+    @conn = Faraday.new(url: "https://api.github.com/") do |faraday|
+      faraday.adapter  Faraday.default_adapter  # make requests with Net::HTTP
+    end
+  end
+
   def repos_by_user(username)
     response = Faraday.get("https://api.github.com/users/#{username}/repos?client_id=#{ENV['github_client_id']}&client_secret=#{ENV['github_client_secret']}")
 
@@ -36,5 +42,14 @@ class GithubService
 
     commit_details
   end
+
+  def user_repos(username)
+    response = conn.get("/users/#{username}/repos?client_id=#{ENV['github_client_id']}&client_secret=#{ENV['github_client_secret']}&per_page=100")
+
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
+  private
+    attr_reader :conn
 
 end

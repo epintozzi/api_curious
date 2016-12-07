@@ -36,4 +36,16 @@ describe "GithubService" do
       expect(message).to eq("Merge pull request #3 from epintozzi/erin\n\nflawless git workflow")
     end
   end
+
+  context "#user_repos" do
+    it "returns all repositories for a user" do
+      user_repos = GithubService.new.user_repos("epintozzi")
+      repo = user_repos.first
+
+      expect(user_repos).to be_an(Array)
+      expect(repo).to have_key(:full_name)
+      expect(repo).to have_key(:name)
+      expect(repo).to have_key(:description)
+    end
+  end
 end
