@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-12-08T11:13:17-07:00">2016-12-08T11:13:17-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-12-08T11:20:03-07:00">2016-12-08T11:20:03-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,7 +25,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         24.08
+         27.3
        </span>
     </span> hits/line)
   </h2>
@@ -117,7 +117,7 @@
         <td>4</td>
         <td>4</td>
         <td>0</td>
-        <td>1.5</td>
+        <td>2.0</td>
       </tr>
       
       <tr>
@@ -137,7 +137,7 @@
         <td>16</td>
         <td>16</td>
         <td>0</td>
-        <td>18.3</td>
+        <td>22.1</td>
       </tr>
       
       <tr>
@@ -147,7 +147,7 @@
         <td>8</td>
         <td>8</td>
         <td>0</td>
-        <td>19.5</td>
+        <td>21.9</td>
       </tr>
       
       <tr>
@@ -157,7 +157,7 @@
         <td>8</td>
         <td>8</td>
         <td>0</td>
-        <td>19.5</td>
+        <td>21.9</td>
       </tr>
       
       <tr>
@@ -167,7 +167,7 @@
         <td>13</td>
         <td>13</td>
         <td>0</td>
-        <td>116.9</td>
+        <td>129.3</td>
       </tr>
       
       <tr>
@@ -177,7 +177,7 @@
         <td>13</td>
         <td>13</td>
         <td>0</td>
-        <td>8.5</td>
+        <td>9.3</td>
       </tr>
       
       <tr>
@@ -197,7 +197,7 @@
         <td>37</td>
         <td>37</td>
         <td>0</td>
-        <td>19.9</td>
+        <td>23.4</td>
       </tr>
       
     </tbody>
@@ -638,14 +638,14 @@
           <code class="ruby">  def show</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="4">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="4">
+          <span class="hits">3</span>
           
           <code class="ruby">    user = User.find(current_user.id)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="5">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="5">
+          <span class="hits">3</span>
           
           <code class="ruby">    @user_commits = GithubCommit.for_user(user.username)</code>
         </li>
@@ -746,26 +746,26 @@
           <code class="ruby">  def initialize(attributes = {})</code>
         </li>
       
-        <li class="covered" data-hits="44" data-linenumber="5">
-          <span class="hits">44</span>
+        <li class="covered" data-hits="56" data-linenumber="5">
+          <span class="hits">56</span>
           
           <code class="ruby">    @repo = attributes[:repo]</code>
         </li>
       
-        <li class="covered" data-hits="44" data-linenumber="6">
-          <span class="hits">44</span>
+        <li class="covered" data-hits="56" data-linenumber="6">
+          <span class="hits">56</span>
           
           <code class="ruby">    @payload = attributes[:payload]</code>
         </li>
       
-        <li class="covered" data-hits="44" data-linenumber="7">
-          <span class="hits">44</span>
+        <li class="covered" data-hits="56" data-linenumber="7">
+          <span class="hits">56</span>
           
           <code class="ruby">    @repo_name = attributes[:repo][:name]</code>
         </li>
       
-        <li class="covered" data-hits="44" data-linenumber="8">
-          <span class="hits">44</span>
+        <li class="covered" data-hits="56" data-linenumber="8">
+          <span class="hits">56</span>
           
           <code class="ruby">    @message_hash = attributes[:payload][:commits]</code>
         </li>
@@ -788,14 +788,14 @@
           <code class="ruby">  def self.for_user(username)</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="12">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="5" data-linenumber="12">
+          <span class="hits">5</span>
           
           <code class="ruby">    GithubService.new.all_commits_by_user(username).map do |item|</code>
         </li>
       
-        <li class="covered" data-hits="44" data-linenumber="13">
-          <span class="hits">44</span>
+        <li class="covered" data-hits="56" data-linenumber="13">
+          <span class="hits">56</span>
           
           <code class="ruby">      GithubCommit.new(item)</code>
         </li>
@@ -926,14 +926,14 @@
           <code class="ruby">  def initialize(attributes = {})</code>
         </li>
       
-        <li class="covered" data-hits="48" data-linenumber="5">
-          <span class="hits">48</span>
+        <li class="covered" data-hits="54" data-linenumber="5">
+          <span class="hits">54</span>
           
           <code class="ruby">    @login = attributes[:login]</code>
         </li>
       
-        <li class="covered" data-hits="48" data-linenumber="6">
-          <span class="hits">48</span>
+        <li class="covered" data-hits="54" data-linenumber="6">
+          <span class="hits">54</span>
           
           <code class="ruby">    @avatar = attributes[:avatar_url]</code>
         </li>
@@ -956,14 +956,14 @@
           <code class="ruby">  def self.for_user(user)</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="10">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="9" data-linenumber="10">
+          <span class="hits">9</span>
           
           <code class="ruby">    GithubService.new.followers(user).map do |follower_list|</code>
         </li>
       
-        <li class="covered" data-hits="48" data-linenumber="11">
-          <span class="hits">48</span>
+        <li class="covered" data-hits="54" data-linenumber="11">
+          <span class="hits">54</span>
           
           <code class="ruby">      GithubFollower.new(follower_list)</code>
         </li>
@@ -1034,14 +1034,14 @@
           <code class="ruby">  def initialize(attributes = {})</code>
         </li>
       
-        <li class="covered" data-hits="48" data-linenumber="5">
-          <span class="hits">48</span>
+        <li class="covered" data-hits="54" data-linenumber="5">
+          <span class="hits">54</span>
           
           <code class="ruby">    @login = attributes[:login]</code>
         </li>
       
-        <li class="covered" data-hits="48" data-linenumber="6">
-          <span class="hits">48</span>
+        <li class="covered" data-hits="54" data-linenumber="6">
+          <span class="hits">54</span>
           
           <code class="ruby">    @avatar = attributes[:avatar_url]</code>
         </li>
@@ -1064,14 +1064,14 @@
           <code class="ruby">  def self.for_user(user)</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="10">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="9" data-linenumber="10">
+          <span class="hits">9</span>
           
           <code class="ruby">    GithubService.new.following(user).map do |follower_list|</code>
         </li>
       
-        <li class="covered" data-hits="48" data-linenumber="11">
-          <span class="hits">48</span>
+        <li class="covered" data-hits="54" data-linenumber="11">
+          <span class="hits">54</span>
           
           <code class="ruby">      GithubFollowing.new(follower_list)</code>
         </li>
@@ -1142,26 +1142,26 @@
           <code class="ruby">  def initialize(attributes = {})</code>
         </li>
       
-        <li class="covered" data-hits="288" data-linenumber="5">
-          <span class="hits">288</span>
+        <li class="covered" data-hits="320" data-linenumber="5">
+          <span class="hits">320</span>
           
           <code class="ruby">    @name = attributes[:name]</code>
         </li>
       
-        <li class="covered" data-hits="288" data-linenumber="6">
-          <span class="hits">288</span>
+        <li class="covered" data-hits="320" data-linenumber="6">
+          <span class="hits">320</span>
           
           <code class="ruby">    @language = attributes[:language]</code>
         </li>
       
-        <li class="covered" data-hits="288" data-linenumber="7">
-          <span class="hits">288</span>
+        <li class="covered" data-hits="320" data-linenumber="7">
+          <span class="hits">320</span>
           
           <code class="ruby">    @description = attributes[:description]</code>
         </li>
       
-        <li class="covered" data-hits="288" data-linenumber="8">
-          <span class="hits">288</span>
+        <li class="covered" data-hits="320" data-linenumber="8">
+          <span class="hits">320</span>
           
           <code class="ruby">    @updated_at = attributes[:updated_at]</code>
         </li>
@@ -1184,14 +1184,14 @@
           <code class="ruby">  def self.for_user(user)</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="12">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="10" data-linenumber="12">
+          <span class="hits">10</span>
           
           <code class="ruby">    GithubService.new.user_repos(user).map do |raw_repo|</code>
         </li>
       
-        <li class="covered" data-hits="288" data-linenumber="13">
-          <span class="hits">288</span>
+        <li class="covered" data-hits="320" data-linenumber="13">
+          <span class="hits">320</span>
           
           <code class="ruby">      GithubRepo.new(raw_repo)</code>
         </li>
@@ -1292,26 +1292,26 @@
           <code class="ruby">  def initialize(attributes = {})</code>
         </li>
       
-        <li class="covered" data-hits="18" data-linenumber="5">
-          <span class="hits">18</span>
+        <li class="covered" data-hits="20" data-linenumber="5">
+          <span class="hits">20</span>
           
           <code class="ruby">    @full_name = attributes[:full_name]</code>
         </li>
       
-        <li class="covered" data-hits="18" data-linenumber="6">
-          <span class="hits">18</span>
+        <li class="covered" data-hits="20" data-linenumber="6">
+          <span class="hits">20</span>
           
           <code class="ruby">    @language = attributes[:language]</code>
         </li>
       
-        <li class="covered" data-hits="18" data-linenumber="7">
-          <span class="hits">18</span>
+        <li class="covered" data-hits="20" data-linenumber="7">
+          <span class="hits">20</span>
           
           <code class="ruby">    @description = attributes[:description]</code>
         </li>
       
-        <li class="covered" data-hits="18" data-linenumber="8">
-          <span class="hits">18</span>
+        <li class="covered" data-hits="20" data-linenumber="8">
+          <span class="hits">20</span>
           
           <code class="ruby">    @updated_at = attributes[:updated_at]</code>
         </li>
@@ -1334,14 +1334,14 @@
           <code class="ruby">  def self.for_user(user)</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="12">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="10" data-linenumber="12">
+          <span class="hits">10</span>
           
           <code class="ruby">    GithubService.new.starred(user).map do |raw_repo|</code>
         </li>
       
-        <li class="covered" data-hits="18" data-linenumber="13">
-          <span class="hits">18</span>
+        <li class="covered" data-hits="20" data-linenumber="13">
+          <span class="hits">20</span>
           
           <code class="ruby">      GithubStar.new(raw_repo)</code>
         </li>
@@ -1466,14 +1466,14 @@
           <code class="ruby">  def initialize</code>
         </li>
       
-        <li class="covered" data-hits="51" data-linenumber="4">
-          <span class="hits">51</span>
+        <li class="covered" data-hits="57" data-linenumber="4">
+          <span class="hits">57</span>
           
           <code class="ruby">    @conn = Faraday.new(url: &quot;https://api.github.com/&quot;) do |faraday|</code>
         </li>
       
-        <li class="covered" data-hits="51" data-linenumber="5">
-          <span class="hits">51</span>
+        <li class="covered" data-hits="57" data-linenumber="5">
+          <span class="hits">57</span>
           
           <code class="ruby">      faraday.adapter  Faraday.default_adapter  # make requests with Net::HTTP</code>
         </li>
@@ -1502,8 +1502,8 @@
           <code class="ruby">  def all_commits_by_user(username)</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="10">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="6" data-linenumber="10">
+          <span class="hits">6</span>
           
           <code class="ruby">    response = conn.get(&quot;/users/#{username}/events?client_id=#{ENV[&#39;github_client_id&#39;]}&amp;client_secret=#{ENV[&#39;github_client_secret&#39;]}&amp;per_page=100&quot;)</code>
         </li>
@@ -1514,14 +1514,14 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="12">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="6" data-linenumber="12">
+          <span class="hits">6</span>
           
           <code class="ruby">    event_data = JSON.parse(response.body, symbolize_names: true)</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="13">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="6" data-linenumber="13">
+          <span class="hits">6</span>
           
           <code class="ruby">    get_push_events(event_data)</code>
         </li>
@@ -1544,20 +1544,20 @@
           <code class="ruby">  def get_push_events(event_data)</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="17">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="6" data-linenumber="17">
+          <span class="hits">6</span>
           
           <code class="ruby">    push_events = []</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="18">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="6" data-linenumber="18">
+          <span class="hits">6</span>
           
           <code class="ruby">    event_data.each do |commit|</code>
         </li>
       
-        <li class="covered" data-hits="500" data-linenumber="19">
-          <span class="hits">500</span>
+        <li class="covered" data-hits="600" data-linenumber="19">
+          <span class="hits">600</span>
           
           <code class="ruby">      push_events &lt;&lt; commit if commit.has_value?(&quot;PushEvent&quot;)</code>
         </li>
@@ -1574,8 +1574,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="22">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="6" data-linenumber="22">
+          <span class="hits">6</span>
           
           <code class="ruby">    push_events</code>
         </li>
@@ -1646,14 +1646,14 @@
           <code class="ruby">  def user_repos(user)</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="34">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="11" data-linenumber="34">
+          <span class="hits">11</span>
           
           <code class="ruby">    response = conn.get(&quot;/user/repos?access_token=#{user.token}&amp;per_page=100&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="35">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="11" data-linenumber="35">
+          <span class="hits">11</span>
           
           <code class="ruby">    JSON.parse(response.body, symbolize_names: true)</code>
         </li>
@@ -1676,14 +1676,14 @@
           <code class="ruby">  def starred(user)</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="39">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="11" data-linenumber="39">
+          <span class="hits">11</span>
           
           <code class="ruby">    response = conn.get(&quot;/user/starred?access_token=#{user.token}&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="40">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="11" data-linenumber="40">
+          <span class="hits">11</span>
           
           <code class="ruby">    JSON.parse(response.body, symbolize_names: true)</code>
         </li>
@@ -1706,14 +1706,14 @@
           <code class="ruby">  def followers(user)</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="44">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="10" data-linenumber="44">
+          <span class="hits">10</span>
           
           <code class="ruby">    response = conn.get(&quot;/user/followers?access_token=#{user.token}&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="45">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="10" data-linenumber="45">
+          <span class="hits">10</span>
           
           <code class="ruby">    JSON.parse(response.body, symbolize_names: true)</code>
         </li>
@@ -1736,14 +1736,14 @@
           <code class="ruby">  def following(user)</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="49">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="10" data-linenumber="49">
+          <span class="hits">10</span>
           
           <code class="ruby">    response = conn.get(&quot;/user/following?access_token=#{user.token}&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="50">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="10" data-linenumber="50">
+          <span class="hits">10</span>
           
           <code class="ruby">    JSON.parse(response.body, symbolize_names: true)</code>
         </li>
@@ -1766,14 +1766,14 @@
           <code class="ruby">  def orgs(user)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="54">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="7" data-linenumber="54">
+          <span class="hits">7</span>
           
           <code class="ruby">    response = conn.get(&quot;/user/orgs?access_token=#{user.token}&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="55">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="7" data-linenumber="55">
+          <span class="hits">7</span>
           
           <code class="ruby">    JSON.parse(response.body, symbolize_names: true)</code>
         </li>
