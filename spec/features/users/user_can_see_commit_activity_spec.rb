@@ -7,6 +7,7 @@ describe "a user can see their commit activity" do
 
       visit user_path(user)
 
-      expect(page).to have_content "Message"
+      expect(page).to have_content "epintozzi/"
+      expect(page).to have_content "Contribution Activity"
   end
 end

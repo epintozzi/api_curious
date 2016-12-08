@@ -8,10 +8,13 @@
 
     <div class="feed">
       <h3 class="contribution-activity">Contribution Activity</h3>
+      <hr>
         <% @user_commits.each do |commit| %>
-          <li>
-            <%= "Created commit in #{commit.repo_name}" %><br>
-            <%= "Message: #{commit.message_hash.first[:message]}" %>
+          <li class="commits">
+            <h4><%= link_to commit.repo_name, repos_path %></h4>
+            <div class="message">
+              <%= "#{commit.message_hash.first[:message]}" %>
+            </div>
             <hr>
           </li>
         <% end %>
