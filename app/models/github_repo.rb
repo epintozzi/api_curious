@@ -5,13 +5,18 @@ class GithubRepo
     @name = attributes[:name]
     @language = attributes[:language]
     @description = attributes[:description]
-    @updated = attributes[:updated_at]
+    @updated_at = attributes[:updated_at]
   end
 
   def self.for_user(user)
     GithubService.new.user_repos(user).map do |raw_repo|
       GithubRepo.new(raw_repo)
     end
+  end
+
+  def date_format(date_string)
+    date = date_string.to_datetime
+    date.strftime("%b %e")
   end
 
 end
