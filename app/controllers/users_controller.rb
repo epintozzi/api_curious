@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
 
   def show
-    @user_commits = GithubService.new.all_commits_by_user("#{current_user.username}")
+    user = User.find(current_user.id)
+    @user_commits = GithubCommit.for_user(user.username)
   end
 
 end

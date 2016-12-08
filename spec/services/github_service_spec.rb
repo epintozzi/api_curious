@@ -12,14 +12,6 @@ describe "GithubService" do
     end
   end
 
-  # context "#commits_by_user_repo" do
-  #   it "returns a user's commits by repo", :vcr do
-  #     user_commits_by_repo = GithubService.new.commits_by_user_repo("epintozzi")
-  #
-  #     expect(user_commits_by_repo).to have_key(:sha)
-  #   end
-  # end
-
   context "#commit_details_by_repo_url" do
     it "returns a user's commit by repo url", :vcr do
       user_commits_by_repo_url = GithubService.new.commit_details_by_repo_url("https://api.github.com/repos/epintozzi/rales_engine/commits/85c1562f955b843c26b9e4210064a7baede9c1fa")
