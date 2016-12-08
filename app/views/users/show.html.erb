@@ -6,7 +6,6 @@
   <div class="col-md-9">
     <%= render 'layouts/tabs' %>
 
-    Followers: <a href='https://api.github.com/users/<%=current_user.username%>/followers'>Followers</a>
     <div class="feed">
       <h3 class="contribution-activity">Contribution Activity</h3>
         <% @user_commits.each do |commit| %>

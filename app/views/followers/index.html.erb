@@ -7,13 +7,7 @@
     <%= render 'layouts/tabs' %>
 
     <div class="feed">
-
-        <% @followers.each do |follower| %>
-          <li>
-            <h3><%= link_to "#{follower[:login]}", followers_path %></h3>
-            <hr>
-          </li>
-        <% end %>
+        <%= render 'layouts/follower' %>
       </div>
   </div>
 </div>
