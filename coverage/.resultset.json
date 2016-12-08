@@ -40,16 +40,6 @@
         null,
         null
       ],
-      "/Users/ebarth26/turing/3module/projects/api_curious/app/controllers/orgs_controller.rb": [
-        1,
-        null,
-        1,
-        0,
-        0,
-        null,
-        null,
-        null
-      ],
       "/Users/ebarth26/turing/3module/projects/api_curious/app/controllers/repos_controller.rb": [
         1,
         null,
@@ -270,6 +260,6 @@
         null
       ]
     },
-    "timestamp": 1481219740
+    "timestamp": 1481219947
   }
 }
