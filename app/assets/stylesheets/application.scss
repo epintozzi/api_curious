@@ -19,6 +19,19 @@
    list-style-type: none !important;
  }
 
+a{
+  color: #4078c0;
+}
+
+a:hover {
+  color: #4078c0;
+  text-decoration: underline;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
  .nav-container {
    margin-left: 90px;
    margin-right: 90px;
@@ -72,7 +85,16 @@
   margin-top: -10px;
 }
 
-.contributions {
+.profile-options {
+  margin-right: 90px;
+  padding-right: 26px;
+}
+
+.feed {
+  margin-right: 90px;
+}
+
+.contribution-activity {
   font-size: 18px;
   font-weight: 300;
 }

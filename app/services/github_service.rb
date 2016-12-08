@@ -1,15 +1,13 @@
 class GithubService
 
-  def repos_by_user(username)
-    response = Faraday.get("https://api.github.com/users/#{username}/repos?client_id=#{ENV['github_client_id']}&client_secret=#{ENV['github_client_secret']}")
-
-    repo_data = JSON.parse(response.body, symbolize_names: true)
-
-    repo_data.first
+  def initialize
+    @conn = Faraday.new(url: "https://api.github.com/") do |faraday|
+      faraday.adapter  Faraday.default_adapter  # make requests with Net::HTTP
+    end
   end
 
   def all_commits_by_user(username)
-    response = Faraday.get("https://api.github.com/users/#{username}/events?client_id=#{ENV['github_client_id']}&client_secret=#{ENV['github_client_secret']}&per_page=100")
+    response = conn.get("/users/#{username}/events?client_id=#{ENV['github_client_id']}&client_secret=#{ENV['github_client_secret']}&per_page=100")
 
     event_data = JSON.parse(response.body, symbolize_names: true)
 
@@ -21,13 +19,13 @@ class GithubService
     push_events
   end
 
-  def commits_by_user_repo(username)
-    response = Faraday.get("https://api.github.com/repos/#{username}/api_curious/commits?client_id=#{ENV['github_client_id']}&client_secret=#{ENV['github_client_secret']}")
-
-    commit_data = JSON.parse(response.body, symbolize_names: true)
-
-    commit_data.first
-  end
+  # def commits_by_user_repo(username)
+  #   response = Faraday.get("https://api.github.com/repos/#{username}/api_curious/commits?client_id=#{ENV['github_client_id']}&client_secret=#{ENV['github_client_secret']}")
+  #
+  #   commit_data = JSON.parse(response.body, symbolize_names: true)
+  #
+  #   commit_data.first
+  # end
 
   def commit_details_by_repo_url(url)
     response = Faraday.get("#{url}?client_id=#{ENV['github_client_id']}&client_secret=#{ENV['github_client_secret']}")
@@ -36,5 +34,20 @@ class GithubService
 
     commit_details
   end
+
+  def user_repos(user)
+    response = conn.get("/user/repos?access_token=#{user.token}&per_page=100")
+
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def starred(user)
+    response = conn.get("/user/starred?access_token=#{user.token}")
+
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
+  private
+    attr_reader :conn
 
 end
