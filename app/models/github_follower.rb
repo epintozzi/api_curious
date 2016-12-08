@@ -1,16 +1,16 @@
-class GithubStar
-  attr_reader :full_name, :full_name, :description, :language, :updated_at
+class GithubFollower
+  attr_reader :name, :full_name, :description, :language, :updated_at
 
   def initialize(attributes = {})
-    @full_name = attributes[:full_name]
+    @name = attributes[:name]
     @language = attributes[:language]
     @description = attributes[:description]
     @updated_at = attributes[:updated_at]
   end
 
   def self.for_user(user)
-    GithubService.new.starred(user).map do |raw_repo|
-      GithubStar.new(raw_repo)
+    GithubService.new.user_repos(user).map do |raw_repo|
+      GithubRepo.new(raw_repo)
     end
   end
 
