@@ -1,6 +1,6 @@
 # API Curious
 
-This project focuses on consuming and working with data from public APIs. I have recreated a version of the Github user profile page where user's can see their recent activity, repositories, starred repositories, followers, and those they follow.
+This project focuses on consuming and working with data from public APIs. I have recreated a version of the Github user profile page where users can see their recent activity, repositories, starred repositories, followers, and those they follow.
 
 Project details can be found here: [API Curious](http://backend.turing.io/module3/projects/apicurious)
 
