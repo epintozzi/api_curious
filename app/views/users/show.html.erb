@@ -10,8 +10,8 @@
       <h3 class="contribution-activity">Contribution Activity</h3>
         <% @user_commits.each do |commit| %>
           <li>
-            <%= "Created commit in #{commit[:repo][:name]}" %><br>
-            <%= "Message: #{commit[:payload][:commits].first[:message]}" %>
+            <%= "Created commit in #{commit.repo_name}" %><br>
+            <%= "Message: #{commit.message_hash.first[:message]}" %>
             <hr>
           </li>
         <% end %>

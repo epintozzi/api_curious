@@ -10,7 +10,10 @@ class GithubService
     response = conn.get("/users/#{username}/events?client_id=#{ENV['github_client_id']}&client_secret=#{ENV['github_client_secret']}&per_page=100")
 
     event_data = JSON.parse(response.body, symbolize_names: true)
+    get_push_events(event_data)
+  end
 
+  def get_push_events(event_data)
     push_events = []
     event_data.each do |commit|
       push_events << commit if commit.has_value?("PushEvent")
@@ -18,14 +21,6 @@ class GithubService
 
     push_events
   end
-
-  # def commits_by_user_repo(username)
-  #   response = Faraday.get("https://api.github.com/repos/#{username}/api_curious/commits?client_id=#{ENV['github_client_id']}&client_secret=#{ENV['github_client_secret']}")
-  #
-  #   commit_data = JSON.parse(response.body, symbolize_names: true)
-  #
-  #   commit_data.first
-  # end
 
   def commit_details_by_repo_url(url)
     response = Faraday.get("#{url}?client_id=#{ENV['github_client_id']}&client_secret=#{ENV['github_client_secret']}")
