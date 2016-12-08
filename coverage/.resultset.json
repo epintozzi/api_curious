@@ -32,6 +32,12 @@
         null,
         null
       ],
+      "/Users/ebarth26/turing/3module/projects/api_curious/app/controllers/gists_controller.rb": [
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/ebarth26/turing/3module/projects/api_curious/app/controllers/home_controller.rb": [
         1,
         null,
@@ -260,6 +266,6 @@
         null
       ]
     },
-    "timestamp": 1481221203
+    "timestamp": 1481221736
   }
 }
