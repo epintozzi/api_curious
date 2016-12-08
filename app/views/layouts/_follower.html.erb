@@ -1,0 +1,13 @@
+<% @followers.each do |follower| %>
+  <li>
+    <div class="followers">
+      <div class="thumbnail-avatar">
+        <img class="follow-avatar" src="<%="#{follower.avatar}"%>">
+      </div>
+      <div class="username">
+        <h4><%= link_to follower.login, followers_path %></h4>
+      </div>
+    </div>
+    <hr>
+  </li>
+<% end %>

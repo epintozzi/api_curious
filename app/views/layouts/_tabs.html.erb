@@ -2,6 +2,6 @@
   <li role="presentation"><a href='/users/<%="#{current_user.id}"%>'>Overview</a></li>
   <li role="presentation"><a href="/repos">Repositories<span class="badge"><%=GithubRepo.for_user(current_user).count %></span></a></li>
   <li role="presentation"><a href="/stars">Stars<span class="badge"><%=GithubStar.for_user(current_user).count %></span></a></li>
-  <li role="presentation"><a href="/followers">Followers<span class="badge">42</span></a></li>
-  <li role="presentation"><a href="/following">Following<span class="badge">42</span></a></li>
+  <li role="presentation"><a href="/followers">Followers<span class="badge"><%=GithubFollower.for_user(current_user).count %></span></a></li>
+  <li role="presentation"><a href="/following">Following<span class="badge"><%=GithubFollowing.for_user(current_user).count %></span></a></li>
 </ul>

@@ -185,10 +185,8 @@ h4 {
   font-size: 16px;
 }
 
-
 .lang-date {
   display: flex;
-  // padding-left: 0px;
 }
 
 .language {
@@ -211,4 +209,27 @@ h4 {
   background-color: #eee;
   border-radius: 20px;
   font-weight: 500;
+}
+
+.thumbnail-avatar .follow-avatar{
+  height: 50px;
+  border-radius: 3px;
+}
+
+.thumbnail-avatar {
+  padding-right: 11px;
+}
+
+.followers {
+  display: flex;
+  margin-top: 20px;
+}
+.username a{
+  font-size: 16px;
+  color: #333;
+}
+.username a:hover{
+  font-size: 16px;
+  color: #4078c0;
+  text-decoration: none;
 }

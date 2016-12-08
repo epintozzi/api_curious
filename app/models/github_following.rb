@@ -1,4 +1,4 @@
-class GithubFollower
+class GithubFollowing
   attr_reader :login, :avatar
 
   def initialize(attributes = {})
@@ -7,8 +7,8 @@ class GithubFollower
   end
 
   def self.for_user(user)
-    GithubService.new.followers(user).map do |follower_list|
-      GithubFollower.new(follower_list)
+    GithubService.new.following(user).map do |follower_list|
+      GithubFollowing.new(follower_list)
     end
   end
 
