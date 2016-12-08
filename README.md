@@ -1,24 +1,25 @@
-# README
+# API Curious
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project focuses on consuming and working with data from public APIs.
 
-Things you may want to cover:
+Project details can be found here: [API Curious](http://backend.turing.io/module3/projects/apicurious)
 
-* Ruby version
+Ruby Version: 2.3.1
+<br>
+Rails Version: 5.0.0.1
 
-* System dependencies
+#### Setup
 
-* Configuration
+To run this project:
 
-* Database creation
+```
+git clone git@github.com:epintozzi/api_curious.git
+cd api_curious
+bundle install
+rake db:create db:migrate
+rails s
+```
 
-* Database initialization
+#### Testing
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This project uses RSpec for testing and can be run with the command `rspec`
