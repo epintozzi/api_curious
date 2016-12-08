@@ -77,4 +77,15 @@ describe "GithubService" do
       expect(follower).to have_key(:login)
     end
   end
+
+  context "#orgs" do
+    it "returns all of a user's organizations", :vcr do
+      user = User.new(token: ENV["github_user_token"])
+      orgs = GithubService.new.orgs(user)
+      org = orgs.first
+
+      expect(orgs).to be_an(Array)
+      expect(org).to have_key(:login)
+    end
+  end
 end

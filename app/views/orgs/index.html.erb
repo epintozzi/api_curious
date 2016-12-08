@@ -8,9 +8,9 @@
 
     <div class="feed">
 
-        <% @following.each do |follower| %>
+        <% @orgs.each do |org| %>
           <li>
-            <h3><%= link_to "#{follower[:login]}", following_index_path %></h3>
+            <h3><%= link_to "#{org[:login]}", orgs_path %></h3>
             <hr>
           </li>
         <% end %>

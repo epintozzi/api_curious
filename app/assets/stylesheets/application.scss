@@ -19,6 +19,37 @@
    list-style-type: none !important;
  }
 
+
+.navbar-nav li a{
+  color: #333 !important;
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 600;
+  padding-right: 8px;
+}
+
+.dropdown-menu li a{
+  font-size: 14px;
+  color: #333;
+  padding: 4px 10px 4px 15px;
+  font-weight: 400;
+}
+
+.signed-in {
+  padding-left: 12px;
+  padding-right: 2px;
+  color: #666;
+  font-weight: 500;
+}
+
+.glyphicon {
+  color: #333 !important;
+}
+
+.navbar-nav li a:hover{
+  color: #4078c0 !important;
+}
+
 a{
   color: #4078c0;
 }
@@ -26,6 +57,11 @@ a{
 a:hover {
   color: #4078c0;
   text-decoration: underline;
+}
+
+.dropdown-menu li a:hover{
+  color: #fff !important;
+  background-color: #4078c0;
 }
 
 h3 {
@@ -58,6 +94,16 @@ h4 {
 
 .avatar {
   height: 20px;
+  border-radius: 3px !important;
+}
+
+.avatar-group {
+  display: inline;
+  margin-bottom: 3px;
+}
+
+.org-avatar {
+  height: 35px;
   border-radius: 3px !important;
 }
 
