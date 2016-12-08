@@ -10,7 +10,18 @@
 
         <% @starred_repos.each do |repo| %>
           <li>
-            <h3><%= link_to "#{repo[:name]}", stars_path %></h3>
+            <h3><%= link_to repo.name, stars_path %></h3>
+            <div class="description">
+              <%= repo.description %>
+            </div>
+            <div class="lang-date">
+              <div class="language">
+                <%= repo.language %>
+              </div>
+              <div class="date">
+                <%= "Updated on #{repo.date_format(repo.updated_at)} "%>
+              </div>
+            </div>
             <hr>
           </li>
         <% end %>
