@@ -21,3 +21,6 @@
 
 # Ignore vcr files
 /spec/fixtures/vcr_cassettes/*
+
+# Ignore simplecov files
+/coverage/*
