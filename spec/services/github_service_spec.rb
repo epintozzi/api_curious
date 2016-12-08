@@ -88,4 +88,16 @@ describe "GithubService" do
       expect(org).to have_key(:login)
     end
   end
+
+  context "#gists" do
+    it "returns all of a user's gists", :vcr do
+      user = User.new(token: ENV["github_user_token"])
+      gists = GithubService.new.gists(user)
+      gist = gists.first
+
+      expect(gists).to be_an(Array)
+      expect(gist).to have_key(:files)
+      expect(gist).to have_key(:description)
+    end
+  end
 end

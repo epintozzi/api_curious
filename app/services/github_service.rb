@@ -60,6 +60,11 @@ class GithubService
     JSON.parse(response.body, symbolize_names: true)
   end
 
+  def gists(user)
+    response = conn.get("/gists?access_token=#{user.token}")
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
   private
     attr_reader :conn
 
