@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe ReposController, type: :controller do
+RSpec.describe FollowingController, type: :controller do
 
   describe "GET #index" do
     it "returns http success", :vcr do
