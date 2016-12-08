@@ -55,4 +55,49 @@ describe "GithubService" do
       expect(repo).to have_key(:description)
     end
   end
+
+  context "#followers" do
+    it "returns all a user's followers", :vcr do
+      user = User.new(token: ENV["github_user_token"])
+      followers = GithubService.new.followers(user)
+      follower = followers.first
+
+      expect(followers).to be_an(Array)
+      expect(follower).to have_key(:login)
+    end
+  end
+
+  context "#following" do
+    it "returns all followers of a user", :vcr do
+      user = User.new(token: ENV["github_user_token"])
+      following = GithubService.new.following(user)
+      follower = following.first
+
+      expect(following).to be_an(Array)
+      expect(follower).to have_key(:login)
+    end
+  end
+
+  context "#orgs" do
+    it "returns all of a user's organizations", :vcr do
+      user = User.new(token: ENV["github_user_token"])
+      orgs = GithubService.new.orgs(user)
+      org = orgs.first
+
+      expect(orgs).to be_an(Array)
+      expect(org).to have_key(:login)
+    end
+  end
+
+  context "#gists" do
+    it "returns all of a user's gists", :vcr do
+      user = User.new(token: ENV["github_user_token"])
+      gists = GithubService.new.gists(user)
+      gist = gists.first
+
+      expect(gists).to be_an(Array)
+      expect(gist).to have_key(:files)
+      expect(gist).to have_key(:description)
+    end
+  end
 end

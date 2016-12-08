@@ -4,7 +4,15 @@
     <li><h1 class="full-name"><%= current_user.name %></h1></li>
     <li class="username"><%= current_user.username %></li>
   </div>
-  <li><%= current_user.location %></li>
-  <li><%= current_user.email %></li>
-  <li>Organizations: <a href='https://api.github.com/users/<%=current_user.username%>/orgs'>Organizations</a></li>
+  <hr>
+  <li><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span><%= current_user.location %></li>
+  <li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a href='mailto:<%="#{current_user.email}"%>'><%= current_user.email %></a></li>
+  <li><span class="glyphicon glyphicon-time" aria-hidden="true"></span>Joined: <%= current_user.email %></li>
+  <hr>
+  <h4>Organizations</h4>
+    <div class="avatar-group">
+      <% GithubService.new.orgs(User.find(current_user.id)).each do |org| %>
+          <img class="org-avatar" src="https://avatars.githubusercontent.com/u/<%=org[:id]%>">
+      <% end %>
+    </div>
 </ul>

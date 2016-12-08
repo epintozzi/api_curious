@@ -8,9 +8,9 @@
 
     <div class="feed">
 
-        <% @starred_repos.each do |repo| %>
+        <% @following.each do |follower| %>
           <li>
-            <h3><%= link_to "#{repo[:name]}", stars_path %></h3>
+            <h3><%= link_to "#{follower[:login]}", following_index_path %></h3>
             <hr>
           </li>
         <% end %>

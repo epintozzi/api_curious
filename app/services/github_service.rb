@@ -37,13 +37,31 @@ class GithubService
 
   def user_repos(user)
     response = conn.get("/user/repos?access_token=#{user.token}&per_page=100")
-
     JSON.parse(response.body, symbolize_names: true)
   end
 
   def starred(user)
     response = conn.get("/user/starred?access_token=#{user.token}")
+    JSON.parse(response.body, symbolize_names: true)
+  end
 
+  def followers(user)
+    response = conn.get("/user/followers?access_token=#{user.token}")
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def following(user)
+    response = conn.get("/user/following?access_token=#{user.token}")
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def orgs(user)
+    response = conn.get("/user/orgs?access_token=#{user.token}")
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def gists(user)
+    response = conn.get("/gists?access_token=#{user.token}")
     JSON.parse(response.body, symbolize_names: true)
   end
 
